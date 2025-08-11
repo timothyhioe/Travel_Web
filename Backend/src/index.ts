@@ -13,15 +13,6 @@ app.get('/', (_req: Request, res: Response) => {
   res.send('hello world');
 });
 
-// Error handling middleware should be at the end
-app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
-  console.error('Unhandled error:', err);
-  // Default error response
-  res.status(500).json({
-    errors: ['Internal Server Error'],
-  });
-});
-
 app.listen(ENV.PORT, () => {
   console.log(`Server is running on port ${ENV.PORT}`);
 });
