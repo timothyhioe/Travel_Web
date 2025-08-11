@@ -1,8 +1,8 @@
 import { relations } from 'drizzle-orm';
 import { pgTable, primaryKey, uuid } from 'drizzle-orm/pg-core';
 
-import { diaryEntry } from './diary-entry.schema.js';
-import { tag } from './tag.schema.js';
+import { diaryEntry } from './diary-entry.schema';
+import { tag } from './tag.schema';
 
 export const diaryEntryToTag = pgTable(
   'diary_entries_to_tags',
