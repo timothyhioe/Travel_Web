@@ -1,7 +1,7 @@
 import * as http from 'http';
 
 import { App } from './app';
-import { EnvType } from './config/env.config';
+import type { EnvType } from './config/env.config';
 
 export class Server {
   constructor(
